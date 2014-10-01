@@ -4,19 +4,23 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 
-public class MyActivity extends Activity {
+public class MyActivity extends Activity implements View.OnClickListener {
     TextView mainTextView;
+    Button mainButton;
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         mainTextView = (TextView) findViewById(R.id.main_textview);
         mainTextView.setText("Set in Java!");
+        mainButton = (Button) findViewById(R.id.main_button);
+        mainButton.setOnClickListener(this);
     }
 
 
@@ -37,5 +41,11 @@ public class MyActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        mainTextView.setText("You're right! She is cool!");
+
     }
 }
