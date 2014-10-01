@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -12,6 +13,7 @@ import android.widget.Button;
 public class MyActivity extends Activity implements View.OnClickListener {
     TextView mainTextView;
     Button mainButton;
+    EditText mainEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MyActivity extends Activity implements View.OnClickListener {
         mainTextView.setText("Set in Java!");
         mainButton = (Button) findViewById(R.id.main_button);
         mainButton.setOnClickListener(this);
+        mainEditText = (EditText) findViewById(R.id.main_edittext);
     }
 
 
@@ -45,7 +48,8 @@ public class MyActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        mainTextView.setText("You're right! She is cool!");
+        mainTextView.setText(mainEditText.getText().toString()
+                + " is learning Android development!");
 
     }
 }
