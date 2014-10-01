@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">My Application</string>
-    <string name="hello_world">Excuse me! This is Kate!</string>
+    <string name="textview">Excuse me! This is Kate!</string>
     <string name="action_settings">Settings</string>
+    <string name="button">Excuse me! This is Kate!</string>
 
 </resources>
