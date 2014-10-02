@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">My Application</string>
-    <string name="textview">Excuse me! This is Kate!</string>
+    <string name="openingwords">Excuse me! This is Kate!</string>
     <string name="action_settings">Settings</string>
     <string name="button">Press this if you think Kate is cool!</string>
     <string name="hint">A Name</string>
